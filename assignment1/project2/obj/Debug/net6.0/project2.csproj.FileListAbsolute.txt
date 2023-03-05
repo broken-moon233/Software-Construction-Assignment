@@ -1,0 +1,15 @@
+D:\learning\c#\code\assignment1\project2\bin\Debug\net6.0\project2.exe
+D:\learning\c#\code\assignment1\project2\bin\Debug\net6.0\project2.deps.json
+D:\learning\c#\code\assignment1\project2\bin\Debug\net6.0\project2.runtimeconfig.json
+D:\learning\c#\code\assignment1\project2\bin\Debug\net6.0\project2.dll
+D:\learning\c#\code\assignment1\project2\bin\Debug\net6.0\project2.pdb
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.csproj.AssemblyReference.cache
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.GeneratedMSBuildEditorConfig.editorconfig
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.AssemblyInfoInputs.cache
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.AssemblyInfo.cs
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.csproj.CoreCompileInputs.cache
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.dll
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\refint\project2.dll
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.pdb
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\project2.genruntimeconfig.cache
+D:\learning\c#\code\assignment1\project2\obj\Debug\net6.0\ref\project2.dll
