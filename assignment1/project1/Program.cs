@@ -1,4 +1,9 @@
 ﻿using System;
+
+/*
+ * 编写程序输出用户指定数据的所有素数因子
+ */
+
 namespace project1
 {
     public class Prime

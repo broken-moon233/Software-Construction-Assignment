@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 
+/*
+ * 编程求一个整数数组的最大值、最小值、平均值和所有数组元素的和。
+ */
+
+
 namespace project2
 {
     public class Array
