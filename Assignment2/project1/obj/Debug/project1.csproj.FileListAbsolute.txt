@@ -1,0 +1,7 @@
+D:\learning\c#\code\Assignment2\project1\obj\Debug\project1.csproj.AssemblyReference.cache
+D:\learning\c#\code\Assignment2\project1\obj\Debug\project1.csproj.SuggestedBindingRedirects.cache
+D:\learning\c#\code\Assignment2\project1\obj\Debug\project1.csproj.CoreCompileInputs.cache
+D:\learning\c#\code\Assignment2\project1\bin\Debug\project1.exe
+D:\learning\c#\code\Assignment2\project1\bin\Debug\project1.pdb
+D:\learning\c#\code\Assignment2\project1\obj\Debug\project1.exe
+D:\learning\c#\code\Assignment2\project1\obj\Debug\project1.pdb
