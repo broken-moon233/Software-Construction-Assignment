@@ -1,75 +1,37 @@
 ﻿using System;
-using project1;
+using System.Diagnostics.CodeAnalysis;
+
+/*
+ * 编程求一个整数数组的最大值、最小值、平均值和所有数组元素的和。
+ */
+
+
 namespace project2
 {
-    public class Factory
+    public class Array
     {
-        public static Rectangle MakeShape(string shapename, int width = 0, int hight = 0, int a = 0, int b = 0, int c = 0)
+        public static void Main()
         {
-            if(shapename == "Square")
+            int[] balance = { 100, 10, 30, 48, 1 };
+            int max, min, ave,sum;
+            sum = 0;
+            max = balance[0];
+            min = balance[0];
+            for (int i = 0; i < 5; i++)
             {
-                return new Square(width);
+                if(max < balance[i]) max = balance[i];
+                if(min > balance[i]) min = balance[i];
+                sum = sum + balance[i];
+                
             }
-            else if(shapename == "Oblong")
-            {
-                return new Oblong(width, hight);
-            }
-            else if(shapename == "Triangle")
-            {
-                return new Triangle(a, b, c);
-            }
-            
-            return null;
-        }
-    }
+            ave = sum / 5;
+            Console.WriteLine(max);
+            Console.WriteLine(min);
+            Console.WriteLine(ave);
+            Console.WriteLine(sum);
 
-    public class Program
-    { 
-        public static void Main(string[] args)
-        {
-            Random op = new Random();
-            Random a = new Random();
-            Random b = new Random();
-            Random c = new Random();
-            double sumArea = 0;
-            int sumLegal = 0;
-            for(int i= 0; i < 10; i++)
-            {
-                switch (op.Next(1,4))
-                {
-                    case 1:
-                        Rectangle square = Factory.MakeShape("Square", a.Next(0, 100));
-                        Console.WriteLine("The " + square.ShapeName + " is " + square.IsLegal()
-                            + " it's area is " + square.GetArea());
-                        if (square.IsLegal())
-                        {
-                            sumLegal += 1;
-                            sumArea += square.GetArea();
-                        }
-                        break;
-                    case 2:
-                        Rectangle oblong = Factory.MakeShape("Oblong", a.Next(0, 100), b.Next(0, 100));
-                        Console.WriteLine("The " + oblong.ShapeName + " is " + oblong.IsLegal()
-                            + " it's area is " + oblong.GetArea());
-                        if (oblong.IsLegal())
-                        {
-                            sumLegal += 1;
-                            sumArea += oblong.GetArea();
-                        }
-                        break;
-                    case 3:
-                        Rectangle triangle = Factory.MakeShape("Triangle", 0, 0, a.Next(0, 100), b.Next(0, 100), c.Next(0, 100));
-                        Console.WriteLine("The " + triangle.ShapeName + " is " + triangle.IsLegal()
-                            + " it's area is " + triangle.GetArea());
-                        if (triangle.IsLegal())
-                        {
-                            sumLegal += 1;
-                            sumArea += triangle.GetArea();
-                        }
-                        break;
-                }
-            }
-            Console.WriteLine("There are " + sumLegal +" legal shapes. The sum of the areas is " + sumArea);
         }
+ 
+
     }
 }
