@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace project2
 {
@@ -16,6 +18,15 @@ namespace project2
         {
             time = 0;
         }
+
+        public void Start()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                Tick();
+                Thread.Sleep(1000);
+            }
+        }
         
         public void Tick()
         {
@@ -24,7 +35,7 @@ namespace project2
             {
                 if(AlarmLog != null)  AlarmLog();
             }
-else
+            else
             {
                 if(TickLog != null) TickLog();
             }
@@ -58,15 +69,7 @@ else
                 clock.SetAlarm(5);
                 clock.TickLog += new Clock.TickLogHandler(subscribEvent.PrintTick);
                 clock.AlarmLog += new Clock.AlarmLogHandler(subscribEvent.PrintAlarm);
-                clock.Tick();
-                clock.Tick();
-                clock.Tick();
-                clock.Tick();
-                clock.Tick();
-                clock.Tick();
-                Console.WriteLine(clock.time);
-                Console.WriteLine(clock.alarmTime);
-                
+                clock.Start();
             }
         }
     }
