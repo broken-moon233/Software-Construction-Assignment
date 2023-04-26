@@ -58,7 +58,15 @@ namespace project1
                 select order;
             return query.ToList();
         }
+        
+        public List<Order> GetAllOrders() {
+            return orderList;
+        }
 
+        public Order GetOrder(int id) {
+            return orderList.Where(o => o.OrderId == id).FirstOrDefault();
+        }
+        
         public List<Order> QueryOrdersByProductName(string productName)
         {
             var query = from order in orderList

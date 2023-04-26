@@ -6,7 +6,7 @@ namespace project1
 {
     public class Order : IComparable<Order>
     {
-        private List<OrderDetail> details = new List<OrderDetail>();
+        private List<OrderDetail> details;
         public int OrderId { get; set; } // 订单号
         public Customer Customer { get; set; } // 客户
         public List<OrderDetail> OrderDetails = new List<OrderDetail>(); // 订单明细
@@ -17,10 +17,7 @@ namespace project1
             get { return OrderDetails.Sum(item => item.Product.Price * item.Quantity); }
         }
 
-        public Order()
-        {
-            CreateTime = DateTime.Now;
-        }
+        public Order() {details = new List<OrderDetail>(); CreateTime = DateTime.Now; }
         
         public List<OrderDetail> Details => details;
         
@@ -30,13 +27,24 @@ namespace project1
             }
             Details.Add(orderDetail);
         }
+        
+        public void AddItem(OrderDetail orderItem) {
+            if(Details.Contains(orderItem))
+                throw new ApplicationException($"添加错误：订单项{orderItem.Product} 已经存在!");
+            Details.Add(orderItem);
+        }
+        
+        public void RemoveDetail(OrderDetail orderItem) {
+            Details.Remove(orderItem);
+        }
 
 
-        public Order(int orderId, Customer customer, DateTime createTime)
+        public Order(int orderId, Customer customer, List<OrderDetail> items)
         {
             OrderId = orderId;
             Customer = customer;
-            CreateTime = createTime;
+            CreateTime = DateTime.Now;
+            this.details = (items == null) ? new List<OrderDetail>() : items;
         }
 
 
